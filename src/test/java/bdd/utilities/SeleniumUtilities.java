@@ -53,9 +53,7 @@ public class SeleniumUtilities extends BaseSetup {
         select.selectByValue(text);
     }
 
-    public int getRowNumber() {
-        return getRowNumber(null);
-    }
+
 
     public int getRowNumber(By locator){
         List<WebElement> row = getDriver().findElements(locator);
