@@ -55,9 +55,9 @@ public class SeleniumUtilities extends BaseSetup {
 
 
 
-    public void getRowNumber(By locator){
+    public int getRowNumber(By locator){
         List<WebElement> row = getDriver().findElements(locator);
-        System.out.println(row.size());
+        return row.size();
     }
 
     public static String randomEmail() {
