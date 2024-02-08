@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         glue = "bdd/steps",
         plugin = {
                 "html:target/test_reports/report.html",
-                "json:target/cucumber_report/report.jsom"
+                "json:target/cucumber_report/report.json"
         }
 )
 public class TestRunner {
