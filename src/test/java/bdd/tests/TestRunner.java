@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
         features = "classpath:features",
         glue = "bdd/steps",
         plugin = {
-                "html:target/test_reports/report.html"
+                "html:target/test_reports/report.html",
+                "json:target/cucumber_report/report.jsom"
         }
 )
 public class TestRunner {
