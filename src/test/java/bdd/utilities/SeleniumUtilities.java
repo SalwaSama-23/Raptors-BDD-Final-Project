@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -19,14 +18,13 @@ import java.util.TimeZone;
 
 public class SeleniumUtilities extends BaseSetup {
 
-    private By locator;
-
     public WebDriverWait getWait() {
         return new WebDriverWait(getDriver(), Duration.ofSeconds(20));
     }
     public WebElement waitForVisibility(By locator){
         return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+
     public String getPageTitle(By locator){
         return getDriver().getTitle();
     }
@@ -52,14 +50,10 @@ public class SeleniumUtilities extends BaseSetup {
         Select select = new Select(element1);
         select.selectByValue(text);
     }
-
-
-
     public int getRowNumber(By locator){
         List<WebElement> row = getDriver().findElements(locator);
         return row.size();
     }
-
     public static String randomEmail() {
         Faker faker = new Faker();
         return faker.internet().emailAddress();
@@ -78,8 +72,6 @@ public class SeleniumUtilities extends BaseSetup {
         dateFormat.setTimeZone(TimeZone.getTimeZone("EST"));
          return dateFormat.format(tomorrow);
     }
-
-
     public static void waitTime(int wait){
       try {
           Thread.sleep(wait);

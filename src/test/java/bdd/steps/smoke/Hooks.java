@@ -7,12 +7,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks extends SeleniumUtilities {
-
     @Before
     public void beforeScenarios() {
         openBrowser();
     }
-
     @After
     public void afterScenarios(Scenario scenario) {
         if (scenario.isFailed()) {

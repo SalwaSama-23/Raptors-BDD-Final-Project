@@ -1,6 +1,5 @@
 package bdd.Base;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -8,7 +7,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -44,13 +42,11 @@ public class BaseSetup {
         else {
             throw new RuntimeException("browser type is not found");
         }
-
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         String url = configs.getProperty("base.url");
         driver.get(url);
     }
-
     private Properties readproperties(){
         String FilePath=System.getProperty("user.dir")
                 +"\\src\\test\\resources\\config\\qa-env.properties";
@@ -68,7 +64,6 @@ public class BaseSetup {
             driver.quit();
         }
     }
-
     public WebDriver getDriver() {
         return driver;
     }

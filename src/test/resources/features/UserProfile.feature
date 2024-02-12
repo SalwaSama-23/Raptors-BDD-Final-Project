@@ -1,15 +1,15 @@
 
-  Feature: validate userProfile Page
+  Feature: Validate UserProfile Page
     Background:
       When click on login button
-    Scenario: validate userprofile information
+    Scenario: Validate Userprofile Information
       And enter username as "supervisor"
       And enter password as "tek_supervisor"
       And click on sign in button
       And click on profile button
       Then validate profile information is correct
 
-    Scenario: validate logout button
+    Scenario: Validate Logout Button
       When enter username as "supervisor"
       And enter password as "tek_supervisor"
       And click on sign in button
